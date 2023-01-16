@@ -14,7 +14,7 @@ def check_ship_fits(random_row, random_column, random_direction, random_size):
     """ Check that the ship infomation generated fits onto the game grid """
     global size_of_grid
 
-    start_row, end_row, start_col, end_col = random_row, random_row + 1, random_column, random_column + 1
+    start_row, end_row, start_column, end_column = random_row, random_row + 1, random_column, random_column + 1
 
     if random_direction == "up":
         if random_row - random_size < 0:
@@ -25,6 +25,11 @@ def check_ship_fits(random_row, random_column, random_direction, random_size):
         if random_row + random_size >= size_of_grid:
             return False
         end_row = random_row + random_size
+
+    elif random_direction == "left":
+        if random_column - random_size < 0:
+            return False
+        start_column = random_column - random_size + 1
 
 
 def create_starting_grid():
