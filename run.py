@@ -130,6 +130,7 @@ def valid_missile_choice():
     """ Returns a valid set of co-ordinates to fire upon """
     global grid
     global alphabet
+    global size_of_grid
 
     valid_choice = False
     row = -1
@@ -146,6 +147,11 @@ def valid_missile_choice():
         row = placement_choice[0]
         column = placement_choice[1]
         if not row.isalpha() or not column.isnumeric():
+            print("Error: Please enter a letter (A-J) and a number (0-9)")
+            continue
+# Ensures letter entered is within grid size
+        row = alphabet.find(row)
+        if not (-1 < row < size_of_grid):
             print("Error: Please enter a letter (A-J) and a number (0-9)")
             continue
 
