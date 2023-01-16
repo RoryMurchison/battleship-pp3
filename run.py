@@ -128,6 +128,16 @@ def print_grid():
 
 def valid_missile_choice():
     """ Returns a valid set of co-ordinates to fire upon """
+    global grid
+    global alphabet
+
+    valid_choice = False
+    row = -1
+    column = -1
+
+    while valid_choice is False:
+        
+
 
 
 def fire_missile():
@@ -136,6 +146,7 @@ def fire_missile():
     global ships_sunk
 
     row, column = valid_missile_choice()
+
 
 def main():
     """ Function that runs the game loop """
