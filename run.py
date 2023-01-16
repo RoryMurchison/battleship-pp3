@@ -10,11 +10,12 @@ game_finished = False
 
 def create_starting_grid():
     """ Creates a 10 x 10 grid for the game to be played on """ 
-    global grid
     global size_of_grid
-    global ships_in_game
+    global grid
     global ship_positions
+    global ships_in_game
 
+# Creating the grid itself
     rows, columns = (size_of_grid, size_of_grid)
 
     grid = []
@@ -23,6 +24,12 @@ def create_starting_grid():
         for c in range(columns):
             row.append(".")
         grid.append(row)
+
+# Place the ships to be guessed on the grid
+    ships_placed = 0
+    ship_positions = []
+
+    while ships_placed != ships_in_game:
 
 
 
