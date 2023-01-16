@@ -1,3 +1,5 @@
+import random
+
 # Global variables
 grid = [[]]
 size_of_grid = 10
@@ -30,6 +32,10 @@ def create_starting_grid():
     ship_positions = []
 
     while ships_placed != ships_in_game:
+        random_row = random.randint(0, rows - 1)
+        random_column = random.randint(0, columns - 1)
+        random_direction = random.choice("up", "down", "left", "right")
+        random_length = random.randint(2, 5)
 
 
 
