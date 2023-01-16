@@ -174,6 +174,7 @@ def fire_missile():
     """ Fires missile at selected spot on grid and updates accordingly """
     global grid
     global ships_sunk
+    global turns_left
 
     row, column = valid_missile_choice()
     print(" ")
@@ -182,7 +183,7 @@ def fire_missile():
     if grid[row][column] == ".":
         print("Missile missed, no ship here!")
         grid[row][column] == "#"
-
+# Informs the user of a hit and if the ship is fully sunk
     elif grid[row][column] == "O":
         print("Your missile hit!")
         grid[row][column] == "X"
@@ -191,8 +192,8 @@ def fire_missile():
             ships_sunk += 1
         else:
             print("Hit the rest of this ship to sink it!")
-            
 
+    turns_left -= 1
 
 
 def main():
