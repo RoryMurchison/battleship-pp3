@@ -8,6 +8,7 @@ ship_positions = [[]]
 ships_sunk = 0
 turns_left = 50
 game_finished = False
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def attempt_placing_ship(start_r, end_r, start_c, end_c):
@@ -97,6 +98,8 @@ def create_starting_grid():
 def print_grid():
     """ Will print the 10 x 10 game grid with rows (A-J) and columns (0-9) """
     global grid
+    global alphabet
+
 
 
 def main():
