@@ -21,6 +21,11 @@ def check_ship_fits(random_row, random_column, random_direction, random_size):
             return False
         start_row = random_row - random_size + 1
 
+    elif random_direction == "down":
+        if random_row + random_size >= size_of_grid:
+            return False
+        end_row = random_row + random_size
+
 
 def create_starting_grid():
     """ Creates a 10 x 10 grid for the game to be played on """ 
