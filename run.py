@@ -141,7 +141,7 @@ def valid_missile_choice():
         placement_choice = placement_choice.upper()
 # Ensures input is the correct length        
         if len(placement_choice) <= 0 or len(placement_choice) > 2:
-            print("Error: Please enter 1 value for row (A-J) and 1 value for column (0-9)")
+            print("Error: Please enter 1 row (A-J) and 1 column (0-9)")
             continue
 # Ensures a letter and number are entered in the input
         row = placement_choice[0]
@@ -159,10 +159,15 @@ def valid_missile_choice():
         if not (-1 < column < size_of_grid):
             print("Error: Please enter a letter (A-J) and a number (0-9)")
             continue
-            
+# Ensures input hasn't already been chosen by user
+        if grid[row][column] == "X" or grid[row][column] == "#":
+            print("You have already sent a missile here, please pick again")
+            continue
+# Confirms valid input 
+        if grid[row][column] == "." or grid[row][column] == "O":
+            valid_choice = True
 
-
-
+    return row, column
 
 
 def fire_missile():
