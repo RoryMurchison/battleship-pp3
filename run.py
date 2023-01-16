@@ -35,7 +35,9 @@ def create_starting_grid():
         random_row = random.randint(0, rows - 1)
         random_column = random.randint(0, columns - 1)
         random_direction = random.choice("up", "down", "left", "right")
-        random_length = random.randint(2, 5)
+        random_size = random.randint(2, 5)
+        if check_ship_fits(random_row, random_column, random_direction, random_size)
+            ships_placed += 1
 
 
 
