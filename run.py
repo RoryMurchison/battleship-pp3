@@ -170,6 +170,12 @@ def valid_missile_choice():
     return row, column
 
 
+def fully_sunk(row, column):
+    """ checks if all parts of a hit ship have been sunk """
+    global grid
+    global ship_positions
+
+
 def fire_missile():
     """ Fires missile at selected spot on grid and updates accordingly """
     global grid
