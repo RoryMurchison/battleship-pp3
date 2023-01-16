@@ -86,7 +86,7 @@ def create_starting_grid():
     while ships_placed != ships_in_game:
         ran_row = random.randint(0, rows - 1)
         ran_column = random.randint(0, columns - 1)
-        ran_direction = random.choice("up", "down", "left", "right")
+        ran_direction = random.choice(["up", "down", "left", "right"])
         ran_size = random.randint(2, 5)
 
 # Sends randomized ship infomation to be validated
