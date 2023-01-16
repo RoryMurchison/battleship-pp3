@@ -12,6 +12,15 @@ game_finished = False
 
 def attempt_placing_ship(start_row, end_row, start_column, end_column):
     """ Places a ship on the board if another ship is not occupying the space needed """
+    global grid
+    global ship_positions
+
+    place_ship_here = True
+    for r in range(start_row, end_row):
+        for c in range(start_column, end_column):
+            if grid[r][c] != ".":
+                place_ship_here = False
+                break
 
 
 def check_ship_fits(random_row, random_column, random_direction, random_size):
