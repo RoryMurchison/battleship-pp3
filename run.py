@@ -10,6 +10,10 @@ turns_left = 50
 game_finished = False
 
 
+def attempt_placing_ship(start_row, end_row, start_column, end_column):
+    """ Places a ship on the board if another ship is not occupying the space needed """
+
+
 def check_ship_fits(random_row, random_column, random_direction, random_size):
     """ Check that the ship infomation generated fits onto the game grid """
     global size_of_grid
@@ -35,6 +39,8 @@ def check_ship_fits(random_row, random_column, random_direction, random_size):
         if random_column + random_size >= size_of_grid:
             return False
         end_column = random_column + random_size
+
+    return attempt_placing_ship(start_row, end_row, start_column, end_column)
 
 
 def create_starting_grid():
