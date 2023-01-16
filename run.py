@@ -136,8 +136,11 @@ def valid_missile_choice():
     column = -1
 
     while valid_choice is False:
-        placement_choice = input("Enter row (A-J) and column (0-9). Eg. F6: \n")
+        placement_choice = input("Enter row (A-J) and column (0-9) such as F6: \n")
         placement_choice = placement_choice.upper()
+        if len(placement_choice) <= 0 or len(placement_choice) > 2:
+            print("Error: Please enter 1 value for row (A-J) and 1 value for column (0-9)")
+            continue
 
 
 
