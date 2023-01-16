@@ -136,7 +136,9 @@ def valid_missile_choice():
     column = -1
 
     while valid_choice is False:
-        
+        placement_choice = input("Enter row (A-J) and column (0-9). Eg. F6: \n")
+        placement_choice = placement_choice.upper()
+
 
 
 
