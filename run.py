@@ -175,6 +175,14 @@ def fully_sunk(row, column):
     global grid
     global ship_positions
 
+# Code to find the specific ship hit
+    for position in ship_positions:
+        start_r = position[0]
+        end_r = position[1]
+        start_c = position[2]
+        end_c = position[3]
+        if start_r <= row <= end_r and start_c <= column <= end_c:
+
 
 def fire_missile():
     """ Fires missile at selected spot on grid and updates accordingly """
