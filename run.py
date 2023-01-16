@@ -10,6 +10,10 @@ turns_left = 50
 game_finished = False
 
 
+def check_ship_fits(row, column, random_direction, random_size):
+    """ Check that the ship infomation generated fits onto the game grid """
+
+
 def create_starting_grid():
     """ Creates a 10 x 10 grid for the game to be played on """ 
     global size_of_grid
@@ -27,7 +31,7 @@ def create_starting_grid():
             row.append(".")
         grid.append(row)
 
-# Place the ships to be guessed on the grid
+# Generates random positioning for the ships until all are placed
     ships_placed = 0
     ship_positions = []
 
@@ -36,9 +40,10 @@ def create_starting_grid():
         random_column = random.randint(0, columns - 1)
         random_direction = random.choice("up", "down", "left", "right")
         random_size = random.randint(2, 5)
+
+# Sends randomized ship infomation to be validated
         if check_ship_fits(random_row, random_column, random_direction, random_size)
             ships_placed += 1
-
 
 
 def main():
