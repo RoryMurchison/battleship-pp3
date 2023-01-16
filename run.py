@@ -183,6 +183,17 @@ def fire_missile():
         print("Missile missed, no ship here!")
         grid[row][column] == "#"
 
+    elif grid[row][column] == "O":
+        print("Your missile hit!")
+        grid[row][column] == "X"
+        if fully_sunk(row, column):
+            print("You completely sunk a battleship!")
+            ships_sunk += 1
+        else:
+            print("Hit the rest of this ship to sink it!")
+            
+
+
 
 def main():
     """ Function that runs the game loop """
