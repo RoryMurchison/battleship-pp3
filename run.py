@@ -182,7 +182,12 @@ def fully_sunk(row, column):
         start_c = position[2]
         end_c = position[3]
         if start_r <= row <= end_r and start_c <= column <= end_c:
-
+# Checking to see if all parts of the ship are hit
+            for r in range(start_r, end_r):
+                for c in range(start_c, end_c):
+                    if grid[r][c] != "X":
+                        return False
+    return True
 
 def fire_missile():
     """ Fires missile at selected spot on grid and updates accordingly """
