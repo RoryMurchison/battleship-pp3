@@ -12,6 +12,7 @@ game_finished = False
 
 def check_ship_fits(row, column, random_direction, random_size):
     """ Check that the ship infomation generated fits onto the game grid """
+    global size_of_grid
 
 
 def create_starting_grid():
