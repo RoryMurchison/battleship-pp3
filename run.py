@@ -215,6 +215,14 @@ def fire_missile():
     turns_left -= 1
 
 
+def check_game_finished():
+    """ Checks if user has sunk all ships or run out of turns """
+    global ships_sunk
+    global ships_in_game
+    global turns_left
+    global game_finished
+
+
 def main():
     """ Function that runs the game loop """
     global game_finished
@@ -236,5 +244,6 @@ def main():
         fire_missile()
         print("-----------------------------")
         print(" ")
+        check_game_finished()
 
 main()
