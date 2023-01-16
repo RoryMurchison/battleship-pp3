@@ -10,55 +10,56 @@ turns_left = 50
 game_finished = False
 
 
-def attempt_placing_ship(start_row, end_row, start_column, end_column):
-    """ Places a ship on the board if another ship is not occupying the space needed """
+def attempt_placing_ship(start_r, end_r, start_c, end_c):
+    """ Places a ship on the board, but only 
+        if another ship is not occupying the space needed """
     global grid
     global ship_positions
 
 # Checks space required for ship is all empty
     place_ship_here = True
-    for r in range(start_row, end_row):
-        for c in range(start_column, end_column):
+    for r in range(start_r, end_r):
+        for c in range(start_c, end_c):
             if grid[r][c] != ".":
                 place_ship_here = False
                 break
 
 # Places a ship if space is available
     if place_ship_here:
-        ship_positions.append([start_row, end_row, start_column, end_column])
-        for r in range(start_row, end_row):
-            for c in range(start_column, end_column):
+        ship_positions.append([start_r, end_r, start_c, end_c])
+        for r in range(start_r, end_r):
+            for c in range(start_c, end_c):
                 grid[r][c] = "O"
     return place_ship_here    
 
 
-def check_ship_fits(random_row, random_column, random_direction, random_size):
+def check_ship_fits(row, column, direction, size):
     """ Check that the ship infomation generated fits onto the game grid """
     global size_of_grid
 
-    start_row, end_row, start_column, end_column = random_row, random_row + 1, random_column, random_column + 1
+    start_r, end_r, start_c, end_c = row, row + 1, column, column + 1
 
-    if random_direction == "up":
-        if random_row - random_size < 0:
+    if direction == "up":
+        if row - size < 0:
             return False
-        start_row = random_row - random_size + 1
+        start_r = row - size + 1
 
-    elif random_direction == "down":
-        if random_row + random_size >= size_of_grid:
+    elif direction == "down":
+        if row + size >= size_of_grid:
             return False
-        end_row = random_row + random_size
+        end_r = row + size
 
-    elif random_direction == "left":
-        if random_column - random_size < 0:
+    elif direction == "left":
+        if column - size < 0:
             return False
-        start_column = random_column - random_size + 1
+        start_c = column - size + 1
 
-    elif random_direction == "right":
-        if random_column + random_size >= size_of_grid:
+    elif direction == "right":
+        if column + size >= size_of_grid:
             return False
-        end_column = random_column + random_size
+        end_c = column + size
 
-    return attempt_placing_ship(start_row, end_row, start_column, end_column)
+    return attempt_placing_ship(start_r, end_r, start_c, end_c)
 
 
 def create_starting_grid():
@@ -83,13 +84,13 @@ def create_starting_grid():
     ship_positions = []
 
     while ships_placed != ships_in_game:
-        random_row = random.randint(0, rows - 1)
-        random_column = random.randint(0, columns - 1)
-        random_direction = random.choice("up", "down", "left", "right")
-        random_size = random.randint(2, 5)
+        ran_row = random.randint(0, rows - 1)
+        ran_column = random.randint(0, columns - 1)
+        ran_direction = random.choice("up", "down", "left", "right")
+        ran_size = random.randint(2, 5)
 
 # Sends randomized ship infomation to be validated
-        if check_ship_fits(random_row, random_column, random_direction, random_size)
+        if check_ship_fits(ran_row, ran_column, ran_direction, ran_size):
             ships_placed += 1
 
 
