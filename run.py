@@ -118,6 +118,11 @@ def print_grid():
                 print(grid[row][column], end=" ")
         print("")
 
+    print("  ", end=" ")
+    for i in range(len(grid[0])):
+        print(str(i), end=" ")
+    print("")
+
 
 def main():
     """ Function that runs the game loop """
