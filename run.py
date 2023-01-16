@@ -101,7 +101,7 @@ def print_grid():
     global alphabet
 
 # Enables ships to be seen to test they are correctly placed
-    grid_testing = True
+    grid_testing = False
 
 # Slices alphabet string to the required length
     alphabet = alphabet[0: len(grid) + 1]
@@ -234,5 +234,7 @@ def main():
         print("You have " + str(turns_left) + " missiles remaining!")
         print(str(ships_in_game - ships_sunk) + " enemy ships remain!")
         fire_missile()
+        print("-----------------------------")
+        print(" ")
 
 main()
