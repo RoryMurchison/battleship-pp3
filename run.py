@@ -10,9 +10,16 @@ turns_left = 50
 game_finished = False
 
 
-def check_ship_fits(row, column, random_direction, random_size):
+def check_ship_fits(random_row, random_column, random_direction, random_size):
     """ Check that the ship infomation generated fits onto the game grid """
     global size_of_grid
+
+    start_row, end_row, start_col, end_col = random_row, random_row + 1, random_column, random_column + 1
+
+    if random_direction == "up":
+        if random_row - random_size < 0:
+            return False
+        start_row = random_row - random_size + 1
 
 
 def create_starting_grid():
