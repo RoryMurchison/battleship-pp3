@@ -104,7 +104,19 @@ def print_grid():
     grid_testing = True
 
 # Slices alphabet string to the required length
-    alphabet = alphabet[0 : len(grid) + 1]
+    alphabet = alphabet[0: len(grid) + 1]
+
+    for row in range(len(grid)):
+        print(alphabet[row], end=") ")
+        for column in range(len(grid[row])):
+            if grid[row][column] == "O":
+                if grid_testing:
+                    print("O", end=" ")
+                else:
+                    print(".", end=" ")
+            else:
+                print(grid[row][column], end=" ")
+        print("")
 
 
 def main():
@@ -120,7 +132,8 @@ def main():
 
     create_starting_grid()
 
-    while game_finished is False:
-        print_grid()
+    # while game_finished is False:
+        
+    print_grid()
 
 main()
