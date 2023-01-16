@@ -100,6 +100,11 @@ def print_grid():
     global grid
     global alphabet
 
+# Enables ships to be seen to test they are correctly placed
+    grid_testing = True
+
+# Slices alphabet string to the required length
+    alphabet = alphabet[0 : len(grid) + 1]
 
 
 def main():
