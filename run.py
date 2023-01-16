@@ -126,6 +126,9 @@ def print_grid():
     print("")
 
 
+def fire_missile():
+    """ Fires missile at selected spot on grid and updates accordingly """
+
 def main():
     """ Function that runs the game loop """
     global game_finished
@@ -145,5 +148,6 @@ def main():
     print(" ")
     print("You have " + str(turns_left) + " missiles remaining!")
     print(str(ships_in_game - ships_sunk) + " enemy ships remain!")
+    fire_missile()
 
 main()
