@@ -154,6 +154,12 @@ def valid_missile_choice():
         if not (-1 < row < size_of_grid):
             print("Error: Please enter a letter (A-J) and a number (0-9)")
             continue
+# Ensures number entered is within grid size
+        column = int(column)
+        if not (-1 < column < size_of_grid):
+            print("Error: Please enter a letter (A-J) and a number (0-9)")
+            continue
+            
 
 
 
