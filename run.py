@@ -94,8 +94,14 @@ def create_starting_grid():
             ships_placed += 1
 
 
+def print_grid():
+    """ Will print the 10 x 10 game grid with rows (A-J) and columns (0-9) """
+    global grid
+
+
 def main():
     """ Function that runs the game loop """
+    global game_finished
 
     print("-----------------------------")
     print("Welcome to Battleships!")
@@ -105,5 +111,8 @@ def main():
     print("-----------------------------")
 
     create_starting_grid()
+
+    while game_finished is False:
+        print_grid()
 
 main()
