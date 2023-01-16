@@ -101,7 +101,7 @@ def print_grid():
     global alphabet
 
 # Enables ships to be seen to test they are correctly placed
-    grid_testing = False
+    grid_testing = True
 
 # Slices alphabet string to the required length
     alphabet = alphabet[0: len(grid) + 1]
@@ -201,11 +201,11 @@ def fire_missile():
 # Informs the user of a missed shot
     if grid[row][column] == ".":
         print("Missile missed, no ship here!")
-        grid[row][column] == "#"
+        grid[row][column] = "#"
 # Informs the user of a hit and if the ship is fully sunk
     elif grid[row][column] == "O":
         print("Your missile hit!")
-        grid[row][column] == "X"
+        grid[row][column] = "X"
         if fully_sunk(row, column):
             print("You completely sunk a battleship!")
             ships_sunk += 1
@@ -228,12 +228,11 @@ def main():
 
     create_starting_grid()
 
-    # while game_finished is False:
-        
-    print_grid()
-    print(" ")
-    print("You have " + str(turns_left) + " missiles remaining!")
-    print(str(ships_in_game - ships_sunk) + " enemy ships remain!")
-    fire_missile()
+    while game_finished is False:  
+        print_grid()
+        print(" ")
+        print("You have " + str(turns_left) + " missiles remaining!")
+        print(str(ships_in_game - ships_sunk) + " enemy ships remain!")
+        fire_missile()
 
 main()
