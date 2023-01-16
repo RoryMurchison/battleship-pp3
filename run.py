@@ -176,6 +176,12 @@ def fire_missile():
     global ships_sunk
 
     row, column = valid_missile_choice()
+    print(" ")
+
+# Informs the user of a missed shot
+    if grid[row][column] == ".":
+        print("Missile missed, no ship here!")
+        grid[row][column] == "#"
 
 
 def main():
