@@ -142,5 +142,8 @@ def main():
     # while game_finished is False:
         
     print_grid()
+    print(" ")
+    print("You have " + str(turns_left) + " missiles remaining!")
+    print(str(ships_in_game - ships_sunk) + " enemy ships remain!")
 
 main()
