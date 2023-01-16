@@ -101,11 +101,12 @@ def print_grid():
     global alphabet
 
 # Enables ships to be seen to test they are correctly placed
-    grid_testing = True
+    grid_testing = False
 
 # Slices alphabet string to the required length
     alphabet = alphabet[0: len(grid) + 1]
 
+# Adds letters down the left side of grid
     for row in range(len(grid)):
         print(alphabet[row], end=") ")
         for column in range(len(grid[row])):
@@ -118,6 +119,7 @@ def print_grid():
                 print(grid[row][column], end=" ")
         print("")
 
+# Adds numbers along the bottom edge of the grid
     print("  ", end=" ")
     for i in range(len(grid[0])):
         print(str(i), end=" ")
