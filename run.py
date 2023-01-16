@@ -1,7 +1,7 @@
 # Global variables
 grid = [[]]
 size_of_grid = 10
-ships_placed = 8
+ships_in_game = 8
 ship_positions = [[]]
 ships_sunk = 0
 turns_left = 50
@@ -12,10 +12,18 @@ def create_starting_grid():
     """ Creates a 10 x 10 grid for the game to be played on """ 
     global grid
     global size_of_grid
-    global ships_placed
+    global ships_in_game
     global ship_positions
 
     rows, columns = (size_of_grid, size_of_grid)
+
+    grid = []
+    for r in range(rows):
+        row = []
+        for c in range(columns):
+            row.append(".")
+        grid.append(row)
+
 
 
 def main():
