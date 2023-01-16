@@ -15,12 +15,21 @@ def attempt_placing_ship(start_row, end_row, start_column, end_column):
     global grid
     global ship_positions
 
+# Checks space required for ship is all empty
     place_ship_here = True
     for r in range(start_row, end_row):
         for c in range(start_column, end_column):
             if grid[r][c] != ".":
                 place_ship_here = False
                 break
+
+# Places a ship if space is available
+    if place_ship_here:
+        ship_positions.append([start_row, end_row, start_column, end_column])
+        for r in range(start_row, end_row):
+            for c in range(start_column, end_column):
+                grid[r][c] = "O"
+    return place_ship_here    
 
 
 def check_ship_fits(random_row, random_column, random_direction, random_size):
