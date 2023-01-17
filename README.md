@@ -2,7 +2,7 @@
 
 This game of battleship takes inspiration from the classic boardgame and puts its own spin on it. This version of battleship is played within a Python terminal, which runs in the Code Institute mock terminal on Heroku. Designed as a single player game, the user must find all the computers randomly placed ships (2-5 in length), within their given amount of turns.
 
-## How to play
+## How To Play
 
 The user will be presented with a grid consisting of ".".
 The "." is used to represent an area of the grid which is unknown.
@@ -13,3 +13,23 @@ A "#" will be used to represent a missed attempt.
 A "X" will be used to represent a hit.
 A running counter will show how many more ships are left to sink and how many turns remain.
 If all ships are sunk before you run out of turns, then you win!
+
+## Features
+
+### Existing Features
+
+    - Randomised board generated
+  
+         - Ships of random length are placed randomly onto the grid.
+         - The ships positioning is hidden to the user so as not to ruin the game.
+
+    - Legend 
+
+        - A legend printed before the grid informs the user what the symbols mean.
+
+    - Dynamic scoring
+
+        - Text is available that details turns remaining and how many ships need to be sunk to win.
+        - This text automatically updates with each turn.
+
+![image displaying welcome text and initial game grid](/assets/images/battle-1.png) 
