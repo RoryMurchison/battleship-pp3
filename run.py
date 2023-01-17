@@ -13,7 +13,7 @@ alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def attempt_placing_ship(start_r, end_r, start_c, end_c):
-    """ Places a ship on the board, but only 
+    """ Places a ship on the board, but only
         if another ship is not occupying the space needed """
     global grid
     global ship_positions
@@ -32,7 +32,7 @@ def attempt_placing_ship(start_r, end_r, start_c, end_c):
         for r in range(start_r, end_r):
             for c in range(start_c, end_c):
                 grid[r][c] = "O"
-    return place_ship_here    
+    return place_ship_here
 
 
 def check_ship_fits(row, column, direction, size):
@@ -65,7 +65,7 @@ def check_ship_fits(row, column, direction, size):
 
 
 def create_starting_grid():
-    """ Creates a 10 x 10 grid for the game to be played on """ 
+    """ Creates a 10 x 10 grid for the game to be played on """
     global size_of_grid
     global grid
     global ship_positions
@@ -246,7 +246,7 @@ def main():
 
     create_starting_grid()
 
-    while game_finished is False:  
+    while game_finished is False:
         print_grid()
         print(" ")
         print("You have " + str(turns_left) + " missiles remaining!")
@@ -255,5 +255,6 @@ def main():
         print("-----------------------------")
         print(" ")
         check_game_finished()
+
 
 main()
