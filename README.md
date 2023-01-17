@@ -54,6 +54,12 @@ If all ships are sunk before you run out of turns, then you win!
 
     - Allow player to determine variables such as grid size, number of ships to be guessed and turns available.
 
+## Data Model
+
+Within this code, I primarily relied on the use of global variables and functions.
+A main function ran the game code, calling other functions when necessary.
+Once the game was set up, a while loop was used to repeat the functions needed for the turns until the game was finished.
+
 ## Testing
 
 I have manually tested this project by:
