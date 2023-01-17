@@ -67,3 +67,15 @@ I have manually tested this project by:
     - No errors were found using a PEP8 Python validator.
 
 ![image displaying the code in the validator showing no errors](/assets/images/python-v.png)
+
+## Bugs
+
+### Solved Bugs
+
+    - The terminal got stuck in an infinite loop printing the grid due to the print grid function being the only code in a True while statement which was resolved by commenting out the statement during development.
+    - Fired missiles didn't update the grid as == was used as opposed to = in the code that updated the grid.
+    -The code wasn't generating random ship placement everytime it was run and so the random was linked to time to help this.
+
+### Unsolved Bugs
+
+    - No bugs remaining.
