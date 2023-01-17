@@ -49,3 +49,21 @@ If all ships are sunk before you run out of turns, then you win!
         - After each turn the grid reprints with the updated information for the user.
 
 ![image displaying up to date grid and dynamic scoring](/assets/images/battle-3.png)
+
+### Future Features
+
+    - Allow player to determine variables such as grid size, number of ships to be guessed and turns available.
+
+## Testing
+
+I have manually tested this project by:
+
+    - Running and playing the game in the local terminal.
+    - Given inputs expected to fail so as to ensure correct error messages show.
+    - Run the code through a Python Linter which confirmed no problems with the code.
+
+### Validator Testing
+
+    - No errors were found using a PEP8 Python validator.
+
+![image displaying the code in the validator showing no errors](/assets/images/python-v.png)
