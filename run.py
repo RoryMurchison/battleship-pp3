@@ -140,9 +140,9 @@ def valid_missile_choice():
     column = -1
 
     while valid_choice is False:
-        placement_choice = input("Enter row (A-J) and column (0-9) such as F6: \n")
+        placement_choice = input("Enter row (A-J) and column (0-9), eg. F6:\n")
         placement_choice = placement_choice.upper()
-# Ensures input is the correct length        
+# Ensures input is the correct length
         if len(placement_choice) <= 1 or len(placement_choice) > 2:
             print("Error: Please enter 1 row (A-J) and 1 column (0-9)")
             continue
@@ -166,7 +166,7 @@ def valid_missile_choice():
         if grid[row][column] == "X" or grid[row][column] == "#":
             print("You have already sent a missile here, please pick again")
             continue
-# Confirms valid input 
+# Confirms valid input
         if grid[row][column] == "." or grid[row][column] == "O":
             valid_choice = True
 
@@ -185,12 +185,12 @@ def fully_sunk(row, column):
         start_c = position[2]
         end_c = position[3]
         if start_r <= row <= end_r and start_c <= column <= end_c:
-# Checking to see if all parts of the ship are hit
             for r in range(start_r, end_r):
                 for c in range(start_c, end_c):
                     if grid[r][c] != "X":
                         return False
     return True
+
 
 def fire_missile():
     """ Fires missile at selected spot on grid and updates accordingly """
