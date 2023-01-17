@@ -222,6 +222,13 @@ def check_game_finished():
     global turns_left
     global game_finished
 
+    if ships_in_game == ships_sunk:
+        print("CONGRATULATIONS! You sunk all the battleships!")
+        game_finished = True
+    elif turns_left <= 0:
+        print("You're out of turns, better luck next time!")
+        game_finished = True
+
 
 def main():
     """ Function that runs the game loop """
