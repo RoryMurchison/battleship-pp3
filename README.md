@@ -98,9 +98,7 @@ This project was deployed using Code Institutes mock terminal for Heroku.
         - Link the Heroku app to the repository
         - Deploy
 
-    - A live link can be found here
-
-        - https://battleship-pp3-rory.herokuapp.com/
+A live link can be found here - https://battleship-pp3-rory.herokuapp.com/
 
 ## Credits
 
