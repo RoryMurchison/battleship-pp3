@@ -27,9 +27,25 @@ If all ships are sunk before you run out of turns, then you win!
 
         - A legend printed before the grid informs the user what the symbols mean.
 
+![image displaying welcome text and initial game grid](/assets/images/battle-1.png) 
+
+    - Accepts user input
+
+    - Input validation and error checking
+
+        - You can't enter coordinates outside the grid.
+        - You can't enter coordinates unless in proper format (eg. letter then number, f6).
+        - You can't enter coordinates you have already guessed.
+
+![image displaying input validation](/assets/images/battle-2.png) 
+
     - Dynamic scoring
 
         - Text is available that details turns remaining and how many ships need to be sunk to win.
         - This text automatically updates with each turn.
 
-![image displaying welcome text and initial game grid](/assets/images/battle-1.png) 
+    - Grid reprints
+
+        - After each turn the grid reprints with the updated information for the user.
+
+![image displaying up to date grid and dynamic scoring](/assets/images/battle-3.png)
