@@ -79,3 +79,19 @@ I have manually tested this project by:
 ### Unsolved Bugs
 
     - No bugs remaining.
+
+## Deployment
+
+This project was deployed using Code Institutes mock terminal for Heroku.
+   
+    - Deployment steps
+
+        - Create a new Heroku app
+        - Add config var with key: PORT and value: 8000
+        - Add buildpacks Python and NodeJS in that order
+        - Link the Heroku app to the repository
+        - Deploy
+
+## Credits
+
+    - Code Institute for the deployment terminal
