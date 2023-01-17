@@ -1,4 +1,5 @@
 import random
+import time
 
 # Global variables
 grid = [[]]
@@ -69,6 +70,8 @@ def create_starting_grid():
     global grid
     global ship_positions
     global ships_in_game
+
+    random.seed(time.time())
 
 # Creating the grid itself
     rows, columns = (size_of_grid, size_of_grid)
